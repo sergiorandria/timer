@@ -37,7 +37,6 @@ private:
     
     // Time tracking - for countdown
     std::chrono::steady_clock::time_point start_time;
-    std::chrono::steady_clock::time_point paused_time;
     std::chrono::nanoseconds initial_time{0};     // Total time to count down from
     std::chrono::nanoseconds remaining_time{0};   // Time remaining
     

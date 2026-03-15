@@ -166,7 +166,7 @@ void TimerApplication::start_timer() {
     if (paused) {
         // Resume from pause
         paused = false;
-        start_time = std::chrono::steady_clock::now();
+        start_time = std::chrono::steady_clock::now() - (initial_time - remaining_time);
     } else {
         // Start from beginning with preset
         int minutes = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(spin_button));
